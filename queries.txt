@@ -49,3 +49,9 @@ FROM `departments`
 SELECT COUNT(*) AS 'teacher_with_phone'
 FROM `teachers` 
 WHERE `phone` IS NOT NULL
+
+9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo
+degree_id, inserire un valore casuale)
+
+INSERT INTO `students`(`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) 
+VALUES ('5','Alessandro','Di Bernardo','2004-02-23','DAHSDASHDASDASD','2012-02-20','434343','ale@gmail.com')
