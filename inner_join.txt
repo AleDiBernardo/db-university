@@ -1,0 +1,8 @@
+1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+
+SELECT  `students`.`id`, `students`.`name`, `students`.`surname`, `degrees`.`name`
+FROM `students`
+INNER JOIN `degrees`
+ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` LIKE "%economia%"
+OR `degrees`.`id` = 53
