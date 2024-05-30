@@ -1,0 +1,13 @@
+1. Contare quanti iscritti ci sono stati ogni anno
+
+SELECT YEAR(`students`.`enrolment_date`), COUNT(*) AS `num_of_students`
+FROM `students`
+GROUP BY YEAR(`students`.`enrolment_date`)
+
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+SELECT `teachers`.`office_address`, COUNT(*) AS `same_office`
+FROM `teachers`
+GROUP BY `teachers`.`office_address`
+
+3. Calcolare la media dei voti di ogni appello d'esame
